@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 
 const PORT = process.env.PORT || 5000;
-
+    
 /*
 Fetch ETF data from Yahoo Finance
 */

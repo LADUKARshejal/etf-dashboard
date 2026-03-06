@@ -12,8 +12,9 @@ function App() {
   const symbol = "NIFTYBEES.NS";
 
   useEffect(() => {
+    var url="https://etf-93fl.onrender.com";
 
-    axios.get(`https://etf-dashboard-1-thm0.onrender.com/api/etf/${symbol}`)
+    axios.get(`${url}/api/etf/${symbol}`)
       .then(res => {
         const cleanPrices = res.data.prices.filter(p => p !== null);
         setPrices(cleanPrices);
