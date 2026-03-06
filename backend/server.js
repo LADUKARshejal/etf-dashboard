@@ -6,7 +6,7 @@ const app = express();
 
 app.use(cors());
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 /*
 Fetch ETF data from Yahoo Finance
@@ -25,7 +25,6 @@ app.get("/api/etf/:symbol", async (req, res) => {
         const result = response.data.chart.result[0];
 
         const timestamps = result.timestamp;
-
         const prices = result.indicators.quote[0].close;
 
         res.json({
