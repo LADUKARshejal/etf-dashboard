@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
 
-    axios.get(`http://localhost:5000/api/etf/${symbol}`)
+    axios.get(`https://etf-dashboard-1-thm0.onrender.com/api/etf/${symbol}`)
       .then(res => {
         const cleanPrices = res.data.prices.filter(p => p !== null);
         setPrices(cleanPrices);
