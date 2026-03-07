@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     var url="https://etf-93fl.onrender.com";
-
+    // var url = "http://localhost:5000";
     axios.get(`${url}/api/etf/${symbol}`)
       .then(res => {
         const cleanPrices = res.data.prices.filter(p => p !== null);
